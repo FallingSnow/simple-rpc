@@ -1,0 +1,35 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "extends": ["eslint:recommended"],
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "semi": "warn",
+        "no-useless-escape": "warn",
+        "comma-dangle": "off",
+        "quotes": ["warn", "double"],
+        "no-multiple-empty-lines": "off",
+        "import/first": "off",
+        "require-await": "off",
+        "func-names": ["warn", "as-needed"],
+        "space-before-function-paren": ["error", {
+            "anonymous": "never",
+            "named": "never",
+            "asyncArrow": "always"
+        }],
+        "no-unused-vars": ["warn", {
+            "varsIgnorePattern": "^_.*$",
+            "argsIgnorePattern": "^_.*$"
+        }],
+        "unicorn/catch-error-name": "off",
+        "import/extensions": "off",
+        "unicorn/import-index": "off",
+        "promise/param-names": "off"
+    }
+}

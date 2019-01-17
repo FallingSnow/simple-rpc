@@ -1,0 +1,51 @@
+{
+    "name": "simple-rpc",
+    "version": "0.1.0",
+    "description": "A simple websocket rpc layer",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "style": "xo"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/FallingSnow/simple-rpc.git"
+    },
+    "keywords": [
+        "rpc",
+        "websocket"
+    ],
+    "author": "Ayrton Sparling",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/FallingSnow/simple-rpc/issues"
+    },
+    "homepage": "https://github.com/FallingSnow/simple-rpc#readme",
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run style"
+        }
+    },
+    "xo": {
+        "semicolon": true,
+        "space": 4,
+        "extends": [
+            "./.eslintrc.json"
+        ]
+    },
+    "devDependencies": {
+        "eslint": "^5.12.0",
+        "husky": "^1.3.1",
+        "xo": "^0.24.0"
+    },
+    "dependencies": {
+        "es6-promisify": "^6.0.1",
+        "esm": "^3.1.0",
+        "reconnecting-websocket": "^4.1.10",
+        "ws": "^6.1.2"
+    },
+    "browser": {
+        "ws": false,
+        "index.js": "./lib/client.js"
+    }
+}
